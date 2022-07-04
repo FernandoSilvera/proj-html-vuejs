@@ -1,24 +1,28 @@
 <template>
-  <header class="bg-dark-purple">
+  <header class="bg-dark-purple py-3">
     <div class="container">
-      <div class="row row-cols-3">
+      <div class="row align-items-center">
         <div class="col">
           <img src="/img/light-logo.png" alt="logo maxcoach">
         </div>
 
-        <div class="col">
+        <div class="col-9">
           <nav>
-            <ul>
+            <ul class="m-0">
               <li v-for="(navLink, i) in navLinks" :key="i">
                 <a href="#">{{ navLink }}</a>
-                
+                <i class="fa-solid fa-angle-down fa-2xs my-angle-down"></i>
+              </li>
+              <li><i class="fa-solid fa-cart-shopping fa-2xs"></i></li>
+              <li><i class="fa-solid fa-user"></i></li>
+              <li>
+                <div>
+                <input type="text" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+                <button class="btn bg-white" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
               </li>
             </ul>
           </nav>
-        </div>
-
-        <div class="col">
-
         </div>
       </div>
     </div>
@@ -40,13 +44,27 @@ export default {
 @import "../assets/scss/variables";
 @import "../assets/scss/utilities";
 
+img {
+  width: 50%;
+}
+
 li {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+  color: white;
 
   a {
+    margin-right: 4px;
     color: white;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .my-angle-down {
+    vertical-align: middle;
   }
 }
 </style>

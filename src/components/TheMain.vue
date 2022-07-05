@@ -8,14 +8,14 @@
       </div>
     </section>
 
-    <section id="courses" class="py-5">
+    <section id="courses" class="bg-lighter-gray py-5">
       <div class="container">
         <div class="text-center py-3">
           <div class="mb-3"><span class="subtitle">Choose a course to get started</span></div>
           <h2>Latest Featured <span class="text-primary">Courses</span></h2>
         </div>
 
-        <div class="row row-cols-2 flex-wrap">
+        <div class="row flex-wrap mb-5">
           <CourseCard v-for="(course, i) in coursesList" :key="i"
           :img="course.image"
           :price="course.price"
@@ -23,6 +23,10 @@
           :lessons="course.lessons"
           :students="course.students">
           </CourseCard>
+        </div>
+
+        <div class="text-center mb-3">
+          <button class="btn btn-primary my-btn-primary">View all courses -></button>
         </div>
       </div>
     </section>
@@ -101,5 +105,10 @@ export default {
   font-size: 14px;
   font-weight: 600;
   color: white;
+
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
 }
 </style>

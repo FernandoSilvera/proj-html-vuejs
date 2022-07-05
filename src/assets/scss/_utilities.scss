@@ -1,5 +1,10 @@
 @import "./variables";
 
+// COLORS ------------------------------------
+.text-light-gray {
+  color: $light-gray;
+}
+
 .text-medium-gray {
   color: $medium-gray;
 }
@@ -10,4 +15,13 @@
 
 .bg-dark-purple {
   background-color: $dark-purple;
+}
+
+
+// CONTENT -----------------------------------
+.subtitle {
+  font-size: 12px;
+  color: $dark-gray;
+  font-weight: 500;
+  text-transform: uppercase;
 }

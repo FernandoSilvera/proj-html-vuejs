@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-dark-gray">
+  <footer class="text-dark-gray py-5">
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -27,7 +27,7 @@
             <div><a href="support@maxcoach.com">support@maxcoach.com</a></div>
           </address>
 
-          <div>
+          <div class="mt-4">
             <a href="#"><i v-for="(socialIcon, i) in socialIcons" :key="i" :class="socialIcon" class="fa-xl"></i></a>
           </div>
         </div>
@@ -56,6 +56,8 @@
           </ul>
         </div>
       </div>
+
+      <div class="text-center text-medium-gray mt-5">&copy; 2020 Maxcoach. All Rights Reserved</div>
     </div>
   </footer>
 </template>

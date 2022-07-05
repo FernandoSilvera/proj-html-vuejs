@@ -14,14 +14,77 @@
           <div class="mb-3"><span class="subtitle">Choose a course to get started</span></div>
           <h2>Latest Featured <span class="text-primary">Courses</span></h2>
         </div>
+
+        <div class="row row-cols-2 flex-wrap">
+          <CourseCard v-for="(course, i) in coursesList" :key="i"
+          :img="course.image"
+          :price="course.price"
+          :title="course.title"
+          :lessons="course.lessons"
+          :students="course.students">
+          </CourseCard>
+        </div>
       </div>
     </section>
   </main>
 </template>
 
 <script>
+import CourseCard from './CourseCard.vue'
+
 export default {
-  name: "TheMain"
+  name: "TheMain",
+  components: {
+    CourseCard,
+  },
+  data() {
+    return {
+      coursesList: [
+        {
+          image: 0,
+          price: "$40.00",
+          title: "Learning to Write as a Professional Author",
+          lessons: 20,
+          students: 50
+        },
+        {
+          image: 1,
+          price: "Free",
+          title: "Customer-centric Info-Tech Strategies",
+          lessons: 24,
+          students: 769
+        },
+        {
+          image: 2,
+          price: "$19.00",
+          title: "Open Programming Courses for Everyone: Python",
+          lessons: 17,
+          students: 62
+        },
+        {
+          image: 3,
+          price: "$26.00",
+          title: "Academic Listening and Note-taking",
+          lessons: 14,
+          students: 67
+        },
+        {
+          image: 4,
+          price: "$39.00",
+          title: "Master jQuery in a Short Period of Time",
+          lessons: 6,
+          students: 51
+        },
+        {
+          image: 5,
+          price: "$59.00",
+          title: "Introduction to Javascript for Beginners",
+          lessons: 14,
+          students: 76
+        },
+      ]
+    }
+  }
 }
 </script>
 

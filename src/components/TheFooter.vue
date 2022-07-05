@@ -22,13 +22,13 @@
       <div class="row">
         <div class="col-6">
           <address>
-            382 NE 191st St # 87394 Miami, FL 33179-3899<br>
-            +1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)<br>
-            <a href="support@maxcoach.com">support@maxcoach.com</a>
+            <div>382 NE 191st St # 87394 Miami, FL 33179-3899</div>
+            <div>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</div>
+            <div><a href="support@maxcoach.com">support@maxcoach.com</a></div>
           </address>
 
           <div>
-            <i v-for="(socialIcon, i) in socialIcons" :key="i" :class="socialIcon"></i>
+            <a href="#"><i v-for="(socialIcon, i) in socialIcons" :key="i" :class="socialIcon" class="fa-xl"></i></a>
           </div>
         </div>
 
@@ -78,6 +78,17 @@ export default {
 @import "../assets/scss/variables";
 @import "../assets/scss/utilities";
 
+footer {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+address {
+  div {
+    margin-bottom: 0.75rem;
+  }
+}
+
 a {
   color: $dark-gray;
   text-decoration: none;
@@ -89,19 +100,29 @@ a {
 }
 
 h6 {
+  margin-bottom: 1rem;
   color: black;
   font-weight: bold;
 }
 
 i {
-  margin-right: 1.5rem;
+  margin-right: 2rem;
   color: $light-gray;
+
+  &:hover {
+    color: $darker-gray;
+  }
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  a {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
 }
 
 </style>
